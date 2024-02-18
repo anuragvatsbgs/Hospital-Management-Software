@@ -16,7 +16,7 @@ from kivymd.uix.list import ThreeLineAvatarListItem
 from kivy.utils import platform
 import plyer
 from kivymd.uix.list import TwoLineListItem
-class Room_Rent_Khata(MDApp):
+class hospitalmanagementsystem(MDApp):
     global screen_manager
     screen_manager = ScreenManager()
     def build(self):
@@ -29,7 +29,7 @@ class Room_Rent_Khata(MDApp):
 
 if __name__ == "__main__":
     if platform == "win":
-        Room_Rent_Khata().run()
+        hospitalmanagementsystem().run()
 
 
 #dataBase.close()
