@@ -1,129 +1,23 @@
 Screen:
     name: "LOGIN"
-    MDScreen:
-        MDBackdrop:
-            id: backdrop
-            left_action_items: [['menu', lambda x: self.open()]]
-            #right_action_items : [["dots-vertical", lambda x: app.menu.open()]]
-            title: "ROOM RENT KHATA"
-            radius_left: "25dp"
-            radius_right: "25dp"
-            header_text: "Powered By ANUSAV TECHNOLOGY"
-            MDBackdropBackLayer:
-                MyBackdropBackLayer:
-                    id: backlayer
-            MDBackdropFrontLayer:
-                ScrollView:
-                    FloatLayout:
-                        MDLabel:
-                            text:"LANDLORD/RENTER"
-                            font_style: 'H5'
-                            font_name: "Comic"
-                            pos_hint: {'center_x':0.5 ,'center_y':0.92}
-                            halign:"center"
-                        MDLabel:
-                            text:"LOG IN"
-                            font_style: 'H6'
-                            font_name: "Comic"
-                            pos_hint: {'center_x':0.5 ,'center_y':0.82}
-                            halign:"center"
-                        MDTextField:
-                            id:user_id
-                            hint_text: "Landlord Id/Renter Id"
-                            pos_hint : {'center_x':0.5 ,'center_y':0.69}
-                            width: 500
-                            size_hint: (0.7,0.15)
-                        MDTextField:
-                            id: pasword_text_fied
-                            hint_text: "Password"
-                            pos_hint: {'center_x':0.5 ,'center_y':0.56}
-                            width: 500
-                            size_hint: (0.7,0.15)
-                        MDLabel:
-                            text:"Log in As"
-                            pos_hint: {'center_x': .5, 'center_y': .45}
-                            halign:"center"
-                            size_hint: (0.4,0.1)
-                        Check:
-                            id: chkalpha
-                            active: True
-                            pos_hint: {'center_x': .43, 'center_y': .39}
-                        MDLabel:
-                            text:"Landlord"
-                            pos_hint: {'center_x': .18, 'center_y': .39}
-                            halign:"right"
-                            size_hint: (0.4,0.1)
-                        Check:
-                            id: chkbita
-                            active: False
-                            pos_hint: {'center_x': .77, 'center_y': .39}
-                        MDLabel:
-                            text:"Renter"
-                            pos_hint: {'center_x': .53, 'center_y': .39}
-                            halign:"right"
-                            size_hint: (0.4,0.1)
-                        MDRoundFlatIconButton:
-                            text: "LOG IN"
-                            pos_hint: {'center_x':0.5 ,'center_y':0.28}
-                            size_hint: (0.8,0.1)
-                            on_press: app.log_in()
-                            text_color: "white"
-                            md_bg_color:96/255,125/255,139/255,1
-                            width: 100
-                        MDFlatButton:
-                            text: "Reset Password"
-                            font_style: 'Body1'
-                            pos_hint: {'center_x':0.5 ,'center_y':0.19}
-                            halign:"center"
-                            size_hint: (0.5,0.08)
-                            on_release: app.forget()
-                        MDRoundFlatIconButton:
-                            text: "SIGN IN"
-                            pos_hint: {'center_x':0.5 ,'center_y':0.1}
-                            size_hint: (0.8,0.1)
-                            on_press: app.sign_in()
-                            text_color: "white"
-                            md_bg_color:96/255,125/255,139/255,1
-                            width: 100
-#:import Window kivy.core.window.Window
-#:import IconLeftWidget kivymd.uix.list.IconLeftWidget
-<ItemBackdropFrontLayer@TwoLineAvatarListItem>
-    icon: "android"
-    IconLeftWidget:
-        icon: root.icon
-<MyBackdropFrontLayer@ItemBackdropFrontLayer>
-    backdrop: None
-    icon: "images/logo.png"
-    on_press: root.backdrop.open(-Window.height / 2)
-    pos_hint: {"top": 1}
-    _no_ripple_effect: True
-<MyBackdropBackLayer@Image>
-    size_hint: .8, .8
-    source: "images/logo.png"
-    pos_hint: {"center_x": .5, "center_y": .6}
-<ElementCardlog@MDCard>:
-    md_bg_color:115/255,147/255,179/255,1
-    padding:"8dp"
-    spacing:"5dp"
-    radius:[40,20,40,20]
-    ripple_behavior: True
-    image:''
-    text:""
-    items_count:""
-    subtext:''
-    orientation:'vertical'
-    Image:
-        source:root.image
     MDBoxLayout:
-        orientation:'vertical'
-        MDLabel:
-            halign:"center"
-            text:root.text
-            font_style:"Body1"
-        MDLabel:
-            halign:"center"
-            text:root.items_count
-<Check@MDCheckbox>:
-    group: 'group'
-    size_hint: None, None
-    size: dp(48), dp(48)
+
+        MDNavigationRail:
+
+            MDNavigationRailItem:
+                text: "Python"
+                icon: "language-python"
+
+            MDNavigationRailItem:
+                text: "JavaScript"
+                icon: "language-javascript"
+
+            MDNavigationRailItem:
+                text: "CPP"
+                icon: "language-cpp"
+
+            MDNavigationRailItem:
+                text: "Git"
+                icon: "git"
+
+        MDScreen:
