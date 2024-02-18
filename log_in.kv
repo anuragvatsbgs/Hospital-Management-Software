@@ -1,33 +1,68 @@
 Screen:
     name: "LOGIN"
-    MDBoxLayout:
-
-    MDNavigationRail:
-
-        MDNavigationRailItem:
-            text: "Python"
-            icon: "language-python"
-
-        MDNavigationRailItem:
-            text: "JavaScript"
-            icon: "language-javascript"
-
-        MDNavigationRailItem:
-            text: "CPP"
-            icon: "language-cpp"
-
-        MDNavigationRailItem:
-            text: "Git"
-            icon: "git"
-
-    MDScreen:
-        FloatLayout:
-            MDLabel:
-                text: "HOSPITAL MANAGEMENT SYSTEM"
-                halign: "center"
-                pos_hint: {"center_x": .5, "center_y": .95}
-                font_style: 'H5'
-                font_name: "Comic"
-        MDFloatingActionButtonSpeedDial:
-            data: { 'Python': 'language-python','PHP': 'language-php','C++': 'language-cpp' }
-            root_button_anim: True
+    FloatLayout:
+        MDLabel:
+            text:"HOSPITAL MANAGEMENT SOFTWARE"
+            font_style: 'H5'
+            font_name: "Comic"
+            pos_hint: {'center_x':0.5 ,'center_y':0.92}
+            halign:"center"
+        MDLabel:
+            text:"Powered By ANUSAV TECHNOLOGY"
+            font_style: 'H6'
+            font_name: "Comic"
+            pos_hint: {'center_x':0.5 ,'center_y':0.85}
+            halign:"center"
+        MDLabel:
+            text:"LOG IN"
+            font_style: 'H6'
+            font_name: "Comic"
+            pos_hint: {'center_x':0.5 ,'center_y':0.75}
+            halign:"center"
+        MDTextField:
+            id:user_id
+            hint_text: "Hospital Id"
+            pos_hint : {'center_x':0.5 ,'center_y':0.65}
+            width: 500
+            size_hint: (0.7,0.11)
+        MDTextField:
+            id:user_id
+            hint_text: "Staff Id"
+            pos_hint : {'center_x':0.5 ,'center_y':0.55}
+            width: 500
+            size_hint: (0.7,0.11)
+        MDTextField:
+            id: pasword_text_fied
+            hint_text: "Password"
+            pos_hint: {'center_x':0.5 ,'center_y':0.45}
+            width: 500
+            size_hint: (0.7,0.11)
+        
+        
+        MDRoundFlatIconButton:
+            text: "LOG IN"
+            pos_hint: {'center_x':0.5 ,'center_y':0.28}
+            size_hint: (0.8,0.1)
+            on_press: app.log_in()
+            text_color: "white"
+            md_bg_color:96/255,125/255,139/255,1
+            width: 100
+        MDFlatButton:
+            text: "Reset Password"
+            font_style: 'Body1'
+            pos_hint: {'center_x':0.5 ,'center_y':0.19}
+            halign:"center"
+            size_hint: (0.5,0.08)
+            #on_release: app.forget()
+        MDRoundFlatIconButton:
+            text: "SIGN IN"
+            pos_hint: {'center_x':0.5 ,'center_y':0.1}
+            size_hint: (0.8,0.1)
+            on_press: app.sign_in()
+            text_color: "white"
+            md_bg_color:96/255,125/255,139/255,1
+            width: 100
+<Check@MDCheckbox>:
+    group: 'group'
+    size_hint: None, None
+    size: dp(48), dp(48)
