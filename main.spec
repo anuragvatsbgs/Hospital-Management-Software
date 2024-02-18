@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['main.py'],
+    ['C:/Users/anura/Desktop/Hospital-Management-Software/Hospital-Management-Software/main.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('C:/Users/anura/Desktop/Hospital-Management-Software/Hospital-Management-Software/log_in.kv', '.'), ('C:/Users/anura/Desktop/Hospital-Management-Software/Hospital-Management-Software/main.kv', '.'), ('C:/Users/anura/Desktop/Hospital-Management-Software/Hospital-Management-Software/sign_in.kv', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
