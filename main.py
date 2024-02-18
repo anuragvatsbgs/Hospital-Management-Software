@@ -12,11 +12,20 @@ class hospitalmanagementsystem(MDApp):
     screen_manager = ScreenManager()
     def build(self):
         login=Builder.load_file("log_in.kv")                    # Set Log in screen
-        signin=Builder.load_file("sign_in.kv") 
+        signin=Builder.load_file("sign_in.kv")
+        about_us=Builder.load_file("about_us.kv") 
+        faq=Builder.load_file("faq.kv") 
         main=Builder.load_file("main.kv")                       # Set main screen
+        help_support=Builder.load_file("help_support.kv")
+        pasd=Builder.load_file("password.kv")
+        #help_support=Builder.load_file("help_support.kv")
         screen_manager.add_widget(login)                        # Add log in screenwith screenmanager
         screen_manager.add_widget(signin) 
+        screen_manager.add_widget(about_us)
         screen_manager.add_widget(main)                         # Add Main screen with screenmanager
+        screen_manager.add_widget(help_support)
+        screen_manager.add_widget(faq)  
+        screen_manager.add_widget(pasd)
         self.theme_cls.theme_style_switch_animation = True      # animation=true
         self.theme_cls.primary_palette ="BlueGray"              # Theme color
         menu_items = [
@@ -24,7 +33,7 @@ class hospitalmanagementsystem(MDApp):
                 "viewclass": "OneLineListItem",
                 "text": "Password",
                 "font_style" : 'Body1',
-                "height": dp(45),
+                "height": dp(60),
                 "on_release": lambda x="Settings": self.reset_pasd(),
             },
             
@@ -32,33 +41,33 @@ class hospitalmanagementsystem(MDApp):
                 "viewclass": "OneLineListItem",
                 "text":"FAQ",
                 "font_style" : 'Body1',
-                "height": dp(45),
+                "height": dp(60),
                 "on_release": lambda x="Settings": self.faq(),
             },
             {
                 "viewclass": "OneLineListItem",
                 "text": "About Us",
                 "font_style" : 'Body1',
-                "height": dp(45),
+                "height": dp(60),
                 "on_release": lambda x="Settings": self.about_us(),
             },
             {
                 "viewclass": "OneLineListItem",
                 "text": "Help & Support",
                 "font_style" : 'Body1',
-                "height": dp(45),
+                "height": dp(60),
                 "on_release": lambda x="Settings": self.help_support(),
             },
             {
                 "viewclass": "OneLineListItem",
                 "text": "Log Out",
                 "font_style" : 'Body1',
-                "height": dp(45),
+                "height": dp(60),
                 "on_release": lambda x="Log Out": self.log_out(),
             }]
         self.menu = MDDropdownMenu(
             items=menu_items,
-            width_mult=3,
+            width_mult=4,
         )
 
         return screen_manager                                   # Return screen manager
@@ -76,6 +85,20 @@ class hospitalmanagementsystem(MDApp):
     def dot(self, button):
         self.menu.caller = button
         self.menu.open()
+    def about_us(self):
+        screen_manager.current="AboutUs"
+        self.menu.dismiss()
+    def back_to_mainscreen(self):
+        screen_manager.current="Main"
+    def help_support(self):
+        self.menu.dismiss()
+        screen_manager.current="Help_Support"
+    def faq(self):
+        self.menu.dismiss()
+        screen_manager.current="FAQ"
+    def reset_pasd(self):
+        self.menu.dismiss()
+        screen_manager.current="Pasd"
 if __name__ == "__main__":
     if platform == "win":
         hospitalmanagementsystem().run()

@@ -1,0 +1,26 @@
+Screen:
+    name: "FAQ"
+    MDScreen:
+        ScrollView:
+            MDGridLayout:
+                size_hint_y: 0.8
+                cols: 1
+                padding: [dp(30),dp(60),dp(30),dp(10)]
+                spacing: dp(0)
+                MDLabel:
+                    text:"Comming Soon.."
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    halign:"center"
+    MDScreen:
+        FloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDTopAppBar:
+                    title: "FAQ"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    anchor_title: "left"
+                    elevation: 0
+                    left_action_items: [['arrow-left',lambda x: app.back_to_mainscreen()]]
+                Widget:

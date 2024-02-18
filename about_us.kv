@@ -1,0 +1,35 @@
+Screen:
+    name: "AboutUs"
+    MDScreen:
+        ScrollView:
+            MDGridLayout:
+                size_hint_y: 0.8
+                cols: 1
+                padding: [dp(30),dp(60),dp(30),dp(10)]
+                spacing: dp(0)
+                AnchorLayout:
+                    anchor_x: "left"
+                    size_hint_y: None
+                    pos_hint : {'center_x':0.5 ,'center_y':0.75}
+                    height: avatar.height
+                    Image:
+                        id: avatar
+                        size: "120dp", "120dp"
+                        source: "images/anusavtech.png"
+                MDLabel:
+                    text:"AnuSav Technology is Professional App/Gamming company. Here we provide you only Interesting content, which you will Love so much. We are dedicated to provide you the best Experience.We are working to turn our passion into Booming online Website/Apps. We hope you will enjoy our Website/Apps as much as we enjoy offering them to you.  -ANURAG KUMAR"
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    halign:"left"
+    MDScreen:
+        FloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDTopAppBar:
+                    title: "About Us"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    anchor_title: "left"
+                    elevation: 0
+                    left_action_items: [['arrow-left',lambda x: app.back_to_mainscreen()]]
+                Widget:
