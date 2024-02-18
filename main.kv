@@ -41,6 +41,62 @@ Screen:
                 text: "HOSPITAL MANAGEMENT SYSTEM"
                 halign: "center"
                 pos_hint: {"center_x": .5, "center_y": .95}
-                font_style: 'H5'
+                font_style: 'H4'
                 font_name: "Comic"
-            
+            MDIconButton:
+                icon: "images/log_in.jpg"
+                pos_hint: {"center_x": .95, "center_y": .95}  
+                icon_size: "32sp"
+            MDBoxLayout:
+                MDGridLayout:
+                    size_hint_y:1.
+                    cols:3
+                    padding:[dp(100),dp(100),dp(10),dp(30)]
+                    spacing:dp(25)
+                    ElementCard:
+                        image:"images/logo.png"
+                        text:"Add Patient"
+                        on_release: app.readinput()
+                    ElementCard:
+                        image:"images/logo.png"
+                        text:"Update Patient"
+                        on_release: app.readinput()
+                    ElementCard:
+                        image:"images/logo.png"
+                        text:"Search Patient"
+                        on_release: app.readinput()
+                    ElementCard:
+                        image:"images/logo.png"
+                        text:"Discharge Patient"
+                        on_release: app.readinput()
+                    ElementCard:
+                        image:"images/logo.png"
+                        text:"Prepare Bill"
+                        on_release: app.readinput()
+                    ElementCard:
+                        image:"images/logo.png"
+                        text:"Delete Patient"
+                        on_release: app.readinput()
+                    ElementCard:
+                        image:"images/logo.png"
+                        text:"Donate Blood"
+                        on_release: app.readinput()
+                    
+<ElementCard@MDCard>:
+    md_bg_color:96/255,125/255,150/255,1
+    padding:"8dp"
+    spacing:"5dp"
+    radius:[80,40,80,40]
+    ripple_behavior: True
+    image:''
+    text:""
+    orientation:'vertical'
+    Image:
+        source:root.image
+    MDBoxLayout:
+        orientation:'vertical'
+        MDLabel:
+            halign:"center"
+            text:root.text
+            font_style: 'H5'
+            font_name: "Comic"
