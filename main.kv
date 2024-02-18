@@ -31,10 +31,7 @@ Screen:
         MDNavigationRailItem:
             text: "Delete"
             icon: "delete"
-        MDNavigationRailItem:
-            text: "LogOut"
-            icon: "logout"
-            on_press: app.log_out()
+
     MDScreen:
         FloatLayout:
             MDLabel:
@@ -47,6 +44,7 @@ Screen:
                 icon: "images/log_in.jpg"
                 pos_hint: {"center_x": .95, "center_y": .95}  
                 icon_size: "32sp"
+                on_release: app.dot(self)
             MDBoxLayout:
                 MDGridLayout:
                     size_hint_y:1.
