@@ -3,19 +3,8 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager
 from kivy.core.window import Window
 import mysql.connector
-from kivymd.uix.dialog import MDDialog
-from kivymd.uix.button import MDFlatButton
-from kivymd.uix.textfield import MDTextField
-from kivymd.uix.list import ThreeLineListItem
-from kivymd.uix.snackbar import Snackbar
-from kivy.metrics import dp
-from kivymd.uix.menu import MDDropdownMenu
-from kivymd.uix.list import ImageLeftWidget
-from kivymd.uix.boxlayout import MDBoxLayout
-from kivymd.uix.list import ThreeLineAvatarListItem
+
 from kivy.utils import platform
-import plyer
-from kivymd.uix.list import TwoLineListItem
 class hospitalmanagementsystem(MDApp):
     global screen_manager
     screen_manager = ScreenManager()
