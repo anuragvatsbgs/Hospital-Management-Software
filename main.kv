@@ -9,28 +9,21 @@ Screen:
             icon: "home"
 
         MDNavigationRailItem:
-            text: "Add"
+            text: "Medicine"
             icon: "account-multiple-plus"
 
         MDNavigationRailItem:
-            text: "Update"
-            icon: "update"
+            text: "ICU"
+            icon: "account-multiple-plus"
 
         MDNavigationRailItem:
-            text: "Search"
-            icon: "account-search"
-
+            text: "Organ"
+            icon: "account-multiple-plus"
+        
         MDNavigationRailItem:
-            text: "Discharge"
-            icon: "account-card-outline"
-
-        MDNavigationRailItem:
-            text: "Prepare Bill"
-            icon: "billboard"
-
-        MDNavigationRailItem:
-            text: "Delete"
-            icon: "delete"
+            text: "Fund"
+            icon: "account-multiple-plus"
+        
 
     MDScreen:
         FloatLayout:
@@ -45,6 +38,14 @@ Screen:
                 pos_hint: {"center_x": .95, "center_y": .95}  
                 icon_size: "32sp"
                 on_release: app.dot(self)
+            MDIconButton:
+                icon: "chat"
+                pos_hint: {"center_x": .95, "center_y": .1}  
+                icon_size: "32sp"
+                on_release: app.dot(self)
+                md_bg_color: "red"
+                theme_text_color: "Custom"
+                text_color: "white"
             MDBoxLayout:
                 MDGridLayout:
                     size_hint_y:1.
@@ -54,31 +55,31 @@ Screen:
                     ElementCard:
                         image:"images/add_patient.png"
                         text:"Add Patient"
-                        on_release: app.readinput()
+                        #on_release: app.readinput()
                     ElementCard:
                         image:"images/update_patient.jpeg"
                         text:"Update Patient"
-                        on_release: app.readinput()
+                        #on_release: app.readinput()
                     ElementCard:
                         image:"images/search.jpeg"
                         text:"Search Patient"
-                        on_release: app.readinput()
+                        #on_release: app.readinput()
                     ElementCard:
                         image:"images/discharge.png"
                         text:"Discharge Patient"
-                        on_release: app.readinput()
+                        #on_release: app.readinput()
                     ElementCard:
                         image:"images/bill.png"
                         text:"Prepare Bill"
-                        on_release: app.readinput()
+                        #on_release: app.readinput()
                     ElementCard:
                         image:"images/delete.png"
                         text:"Delete Patient"
-                        on_release: app.readinput()
+                        #on_release: app.readinput()
                     ElementCard:
                         image:"images/blood.png"
                         text:"Donate Blood"
-                        on_release: app.readinput()
+                        #on_release: app.readinput()
                     
 <ElementCard@MDCard>:
     md_bg_color:96/255,125/255,150/255,1
