@@ -24,6 +24,7 @@ class hospitalmanagementsystem(MDApp):
         screen_manager.add_widget(login)                        # Add with screenmanager
         self.theme_cls.theme_style_switch_animation = True      # animation=true
         self.theme_cls.primary_palette ="BlueGray"              # Theme color
+        return screen_manager
     def on_start(self):
         screen_manager.current="LOGIN"
 

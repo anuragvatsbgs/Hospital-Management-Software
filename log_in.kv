@@ -1,9 +1,23 @@
 Screen:
     name: "LOGIN"
-    md_bg_color: "#f7f2fa"
-
     MDBoxLayout:
-        id: box
-        spacing: "56dp"
-        adaptive_size: True
-        pos_hint: {"center_x": .5, "center_y": .5}
+
+    MDNavigationRail:
+
+        MDNavigationRailItem:
+            text: "Python"
+            icon: "language-python"
+
+        MDNavigationRailItem:
+            text: "JavaScript"
+            icon: "language-javascript"
+
+        MDNavigationRailItem:
+            text: "CPP"
+            icon: "language-cpp"
+
+        MDNavigationRailItem:
+            text: "Git"
+            icon: "git"
+
+    MDScreen:
