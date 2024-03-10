@@ -1,0 +1,133 @@
+Screen:
+    name: "ADD_DONOR_DETAILS"
+    canvas.before:
+        Rectangle:
+            source:'images/q7.png'
+            size: root.width, root.height
+            pos: self.pos
+    MDScreen:
+        MDBoxLayout:
+            FloatLayout:
+                MDTextField:
+                    id:d_id
+                    hint_text: "DonorID"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.25 ,'center_y':0.8}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_name
+                    hint_text: "Donor Name"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.25 ,'center_y':0.7}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_mobile_no
+                    hint_text: "Mobile No"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.25 ,'center_y':0.6}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_age
+                    hint_text: "Age"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.25 ,'center_y':0.5}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_sex
+                    hint_text: "Sex"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.25 ,'center_y':0.4}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_marital
+                    hint_text: "Marital Status"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.25 ,'center_y':0.3}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_blood
+                    hint_text: "Blood Group"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.25 ,'center_y':0.2}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+
+                MDLabel:
+                    text: "ADDRESS"
+                    halign: "center"
+                    pos_hint: {"center_x": 0.75, "center_y": 0.8}
+                    font_style: 'H4'
+                    font_name: "Comic"
+                MDTextField:
+                    id:d_house
+                    hint_text: "House Number"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.75 ,'center_y':0.7}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_street
+                    hint_text: "Street Number"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.75 ,'center_y':0.6}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_city
+                    hint_text: "City"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.75 ,'center_y':0.5}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_state
+                    hint_text: "State"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.75 ,'center_y':0.4}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDTextField:
+                    id:d_country
+                    hint_text: "Country"
+                    helper_text:"forget"
+                    pos_hint : {'center_x':0.75 ,'center_y':0.3}
+                    width: 500
+                    size_hint: (0.39,0.1)
+                    helper_text: 'Required'
+                MDRoundFlatIconButton:
+                    text: "SUBMIT"
+                    pos_hint: {'center_x':0.5 ,'center_y':0.1}
+                    size_hint: (0.8,0.1)
+                    on_press: app.add_donor_success()
+                    text_color: "white"
+                    md_bg_color:96/255,125/255,139/255,1
+                    width: 100
+    MDScreen:
+        FloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDTopAppBar:
+                    title: "Add Donor Details"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    anchor_title: "left"
+                    elevation: 0
+                    left_action_items: [['arrow-left',lambda x: app.back_to_mainscreen()]]
+                Widget:

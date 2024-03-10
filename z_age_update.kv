@@ -1,0 +1,38 @@
+Screen:
+    name: "AGE1"
+    canvas.before:
+        Rectangle:
+            source:'images/q7.png'
+            size: root.width, root.height
+            pos: self.pos
+    MDScreen:
+        MDBoxLayout:
+            FloatLayout:
+                MDTextField:
+                    id:n_id
+                    hint_text: "AGE"
+                    helper_text: 'forget'
+                    pos_hint: {'center_x':0.5 ,'center_y':0.75}
+                    width: 500
+                    size_hint: (0.7,0.11)
+                    helper_text: 'Required'
+                MDRoundFlatIconButton:
+                    text: "UPDATE"
+                    pos_hint: {'center_x':0.5 ,'center_y':0.55}
+                    size_hint: (0.8,0.1)
+                    on_press: app.my3()
+                    text_color: "white"
+                    md_bg_color:96/255,125/255,139/255,1
+                    width: 100
+    MDScreen:
+        FloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDTopAppBar:
+                    title: "Update Age"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    anchor_title: "left"
+                    elevation: 0
+                    left_action_items: [['arrow-left',lambda x: app.back_update1()]]
+                Widget:

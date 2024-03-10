@@ -1,62 +1,73 @@
 Screen:
     name: "LOGIN"
+    canvas.before:
+        Rectangle:
+            source:'images/background.jpg'
+            size: root.width, root.height
+            pos: self.pos
     FloatLayout:
         MDLabel:
             text:"HOSPITAL MANAGEMENT SOFTWARE"
-            font_style: 'H5'
+            font_style: 'H4'
             font_name: "Comic"
-            pos_hint: {'center_x':0.5 ,'center_y':0.92}
+            pos_hint: {'center_x':0.5 ,'center_y':0.90}
             halign:"center"
+            theme_text_color: "Custom"
+            text_color: 1, 0, 0, 1
+            bold: True
+            
         MDLabel:
-            text:"Powered By ANUSAV TECHNOLOGY"
+            text:"Made By ANURAG VATS "
             font_style: 'H6'
             font_name: "Comic"
-            pos_hint: {'center_x':0.5 ,'center_y':0.85}
+            pos_hint: {'center_x':0.5 ,'center_y':0.82}
             halign:"center"
+            bold: True
         MDLabel:
             text:"LOG IN"
             font_style: 'H6'
             font_name: "Comic"
-            pos_hint: {'center_x':0.5 ,'center_y':0.75}
+            pos_hint: {'center_x':0.5 ,'center_y':0.74}
             halign:"center"
+            bold: True
         MDTextField:
-            id:user_id
+            id:uh_id
             hint_text: "Hospital Id"
-            pos_hint : {'center_x':0.5 ,'center_y':0.65}
+            pos_hint : {'center_x':0.5 ,'center_y':0.62}
             width: 500
             size_hint: (0.7,0.11)
         MDTextField:
-            id:user_id
+            id:us_id
             hint_text: "Staff Id"
-            pos_hint : {'center_x':0.5 ,'center_y':0.55}
+            pos_hint : {'center_x':0.5 ,'center_y':0.52}
             width: 500
             size_hint: (0.7,0.11)
         MDTextField:
-            id: pasword_text_fied
+            id: password_text_field
             hint_text: "Password"
-            pos_hint: {'center_x':0.5 ,'center_y':0.45}
+            pos_hint: {'center_x':0.5 ,'center_y':0.42}
             width: 500
             size_hint: (0.7,0.11)
         
         
         MDRoundFlatIconButton:
             text: "LOG IN"
-            pos_hint: {'center_x':0.5 ,'center_y':0.28}
+            pos_hint: {'center_x':0.5 ,'center_y':0.26}
             size_hint: (0.8,0.1)
             on_press: app.log_in()
             text_color: "white"
             md_bg_color:96/255,125/255,139/255,1
             width: 100
         MDFlatButton:
-            text: "Reset Password"
+            text: "Forget Password"
             font_style: 'Body1'
-            pos_hint: {'center_x':0.5 ,'center_y':0.19}
+            pos_hint: {'center_x':0.5 ,'center_y':0.17}
             halign:"center"
             size_hint: (0.5,0.08)
-            #on_release: app.forget()
+            on_release: app.forgets()
         MDRoundFlatIconButton:
-            text: "SIGN IN"
-            pos_hint: {'center_x':0.5 ,'center_y':0.1}
+            text: "SIGN UP"
+            pos_hint: {'center_x':0.5 ,'center_y':0.09}
             size_hint: (0.8,0.1)
             on_press: app.sign_in()
             text_color: "white"

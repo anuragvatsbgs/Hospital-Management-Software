@@ -1,0 +1,39 @@
+Screen:
+    name: "UPDATE1_PATIENT_DETAILS"
+    canvas.before:
+        Rectangle:
+            source:'images/q7.png'
+            size: root.width, root.height
+            pos: self.pos
+    MDScreen:
+        MDBoxLayout:
+            FloatLayout:
+                MDTextField:
+                    id:s_id
+                    hint_text: "Patient ID"
+                    helper_text: 'forget'
+                    pos_hint: {'center_x':0.5 ,'center_y':0.75}
+                    width: 500
+                    size_hint: (0.7,0.11)
+                    helper_text: 'Required'
+                MDRoundFlatIconButton:
+                    text: "SUBMIT"
+                    pos_hint: {'center_x':0.5 ,'center_y':0.55}
+                    size_hint: (0.8,0.1)
+                    #on_press: app.update_patient_det()
+                    on_press: app.update_patient_det()
+                    text_color: "white"
+                    md_bg_color:96/255,125/255,139/255,1
+                    width: 100
+    MDScreen:
+        FloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDTopAppBar:
+                    title: "Update Patient Details"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    anchor_title: "left"
+                    elevation: 0
+                    left_action_items: [['arrow-left',lambda x: app.back_to_mainscreen()]]
+                Widget:

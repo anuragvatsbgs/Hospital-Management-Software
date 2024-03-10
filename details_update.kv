@@ -1,0 +1,21 @@
+Screen:
+    name: "DETAILS_UPDATE"
+    canvas.before:
+        Rectangle:
+            source:'images/q7.png'
+            size: root.width, root.height
+            pos: self.pos
+    MDScreen:
+        MDBoxLayout:
+            size_hint_y:.89
+            ScrollView:
+                MDList:
+                    id: three_list_viewer
+        MDBoxLayout:
+            orientation: 'vertical'
+            MDTopAppBar:
+                title: "Update Patient Details"
+                anchor_title: "left"
+                elevation: 0
+                left_action_items: [['arrow-left',lambda x: app.back_to_update1_patient_details()]]
+            Widget:

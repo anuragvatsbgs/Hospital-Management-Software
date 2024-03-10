@@ -1,0 +1,141 @@
+Screen:
+    name: "FINAL_BILL"
+    canvas.before:
+        Rectangle:
+            source:'images/q7.png'
+            size: root.width, root.height
+            pos: self.pos
+    MDScreen:
+        MDGridLayout:
+            size_hint_y: 0.9
+            cols: 1
+            padding: [dp(0),dp(0),dp(0),dp(0)]
+            spacing: dp(0)
+            FloatLayout:
+                MDIconButton:
+                    icon: "printer-outline"
+                    pos_hint: {"center_x": .95, "center_y": .1}
+                    icon_size: "32sp"
+                    on_release: app.creatte_bille()
+                    md_bg_color: "green"
+                    theme_text_color: "Custom"
+                    text_color: "white"
+                MDLabel:
+                    text:"Hospital Management System"
+                    font_style: 'H3'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.5 ,'center_y':0.9}
+                    size_hint: (0.8,0.1)
+                    width: 500
+                    halign:"center"
+                MDLabel:
+                    text:"PATIENT COPY"
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.5 ,'center_y':0.80}
+                    size_hint: (0.8,0.1)
+                    halign:"center"
+                    width: 500
+                MDLabel:
+                    id:p_id
+                    text:"Patient Details:"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.72}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_id1
+                    text:"Patient ID:"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.64}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_id2
+                    text:"Patient Name:"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.65 ,'center_y':0.64}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_id
+                    text:"Payment Details:"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.52}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_id3
+                    text:"Bill Number:"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.40}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_id4
+                    text:"Bed Charge:"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.32}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_id5
+                    text:"Treatment Charge:"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.24}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_id6
+                    text:"Other Charge:"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.16}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_id7
+                    text:"Total:"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.08}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+
+    MDScreen:
+        FloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDTopAppBar:
+                    title: "Final Bill"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    anchor_title: "left"
+                    elevation: 0
+                    left_action_items: [['arrow-left',lambda x: app.back_to_prepare_bill()]]
+                Widget:

@@ -1,43 +1,60 @@
 Screen:
     name: "SIGNIN"
+    canvas.before:
+        Rectangle:
+            source:'images/q5.png'
+            size: root.width, root.height
+            pos: self.pos
     FloatLayout:
         MDLabel:
             text:"SIGN IN"
             font_style: 'H5'
             font_name: "Comic"
-            pos_hint: {'center_x':0.5 ,'center_y':0.9}
+            pos_hint: {'center_x':0.5 ,'center_y':0.95}
             halign:"center"
         MDTextField:
-            id:user_id
-            hint_text: "Name"
-            pos_hint : {'center_x':0.5 ,'center_y':0.75}
+            id:u_name
+            hint_text: "Staff Name"
+            pos_hint : {'center_x':0.5 ,'center_y':0.86}
             width: 500
             size_hint: (0.7,0.11)
         MDTextField:
-            id:user_id
+            id:u_hid
+            hint_text: "Hospital ID"
+            pos_hint : {'center_x':0.5 ,'center_y':0.76}
+            width: 500
+            size_hint: (0.7,0.11)
+        MDTextField:
+            id:u_staff_id
             hint_text: "Create Staff Id"
-            pos_hint : {'center_x':0.5 ,'center_y':0.65}
+            pos_hint : {'center_x':0.5 ,'center_y':0.66}
             width: 500
             size_hint: (0.7,0.11)
         MDTextField:
-            id:user_id
+            id:cretpssd
             hint_text: "Create Password"
-            pos_hint : {'center_x':0.5 ,'center_y':0.55}
+            pos_hint : {'center_x':0.5 ,'center_y':0.56}
             width: 500
             size_hint: (0.7,0.11)
         MDTextField:
-            id: pasword_text_fied
+            id: conf_passd
             hint_text: "Confirm Password"
-            pos_hint: {'center_x':0.5 ,'center_y':0.45}
+            pos_hint: {'center_x':0.5 ,'center_y':0.46}
+            width: 500
+            size_hint: (0.7,0.11)
+        MDTextField:
+            id: aadhar
+            hint_text: "Aadhar Number"
+            pos_hint: {'center_x':0.5 ,'center_y':0.36}
             width: 500
             size_hint: (0.7,0.11)
         Check:
             id: chkalpha
             active: True
-            pos_hint: {'center_x': .43, 'center_y': .35}
+            pos_hint: {'center_x': .43, 'center_y': .30}
         MDLabel:
             text:" Accept terms & Conditions "
-            pos_hint: {'center_x': .5, 'center_y': .35}
+            pos_hint: {'center_x': .5, 'center_y': .30}
             halign:"right"
             size_hint: (0.4,0.1)
         
@@ -45,16 +62,16 @@ Screen:
 
         MDRoundFlatIconButton:
             text: "SIGN IN"
-            pos_hint: {'center_x':0.5 ,'center_y':0.25}
+            pos_hint: {'center_x':0.5 ,'center_y':0.20}
             size_hint: (0.8,0.1)
-            on_press: app.log_in()
+            on_press: app.conf_sign_in()
             text_color: "white"
             md_bg_color:96/255,125/255,139/255,1
             width: 100
         
         MDRoundFlatIconButton:
             text: "LOG IN"
-            pos_hint: {'center_x':0.5 ,'center_y':0.1}
+            pos_hint: {'center_x':0.5 ,'center_y':0.08}
             size_hint: (0.8,0.1)
             on_press: app.back_to_log_in()
             text_color: "white"

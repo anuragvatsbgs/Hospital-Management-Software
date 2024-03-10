@@ -1,5 +1,10 @@
 Screen:
     name: "Help_Support"
+    canvas.before:
+        Rectangle:
+            source:'images/q7.png'
+            size: root.width, root.height
+            pos: self.pos
     MDScreen:
         ScrollView:
             MDGridLayout:
@@ -8,7 +13,7 @@ Screen:
                 padding: [dp(30),dp(60),dp(30),dp(10)]
                 spacing: dp(0)
                 MDLabel:
-                    text:"Contact Us on anuragvatsbgs@outlook.com\nGithub: https://github.com/anuragvatsbgs/\nWebsite: https://sites.google.com/view/anusav-technology/home"
+                    text:"Contact Us on anuragvatsbgs@gmail.com"
                     font_style: 'H6'
                     font_name: "Comic"
                     halign:"center"

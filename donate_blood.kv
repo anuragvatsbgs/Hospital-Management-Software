@@ -1,0 +1,139 @@
+Screen:
+    name: "DONATE_ORGAN"
+    canvas.before:
+        Rectangle:
+            source:'images/q7.png'
+            size: root.width, root.height
+            pos: self.pos
+    MDScreen:
+        MDBoxLayout:
+            FloatLayout:
+                MDTextField:
+                    id:o_id
+                    hint_text: "OrganID"
+                    helper_text:"forget"
+                    pos_hint: {'center_x':0.5 ,'center_y':0.75}
+                    width: 500
+                    size_hint: (0.7,0.11)
+                    helper_text: 'Required'
+                Check:
+                    id: p_eye
+                    active: False
+                    pos_hint: {'center_x': 0.16, 'center_y': 0.65}
+                    #on_press: app.eye_donate()
+                MDLabel:
+                    id:p_eye1
+                    text:"EYE"
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.37, "center_y": 0.65}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                Check:
+                    id: p_heart
+                    active: False
+                    pos_hint: {'center_x': 0.16, 'center_y': 0.60}
+                    #on_press: app.blood_donate()
+                MDLabel:
+                    id:p_heart1
+                    text:"HEART"
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.37, "center_y": 0.60}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                Check:
+                    id: p_kidney
+                    active: False
+                    pos_hint: {'center_x': 0.16, 'center_y': 0.55}
+                    #on_press: app.blood_donate()
+                MDLabel:
+                    id:p_kidney1
+                    text:"KIDNEY"
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.37, "center_y": 0.55}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                Check:
+                    id: p_pancreas
+                    active: False
+                    pos_hint: {'center_x': 0.16, 'center_y': 0.50}
+                    #on_press: app.blood_donate()
+                MDLabel:
+                    id:p_pancreas1
+                    text:"PANCREAS"
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.37, "center_y": 0.50}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                Check:
+                    id: p_lung
+                    active: False
+                    pos_hint: {'center_x': 0.16, 'center_y': 0.45}
+                    #on_press: app.blood_donate()
+                MDLabel:
+                    id:p_lung1
+                    text:"LUNG"
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.37, "center_y": 0.45}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                Check:
+                    id:p_liver
+                    active: False
+                    pos_hint: {'center_x': 0.16, 'center_y': 0.40}
+                    #on_press: app.blood_donate()
+                MDLabel:
+                    id:p_liver1
+                    text:"LIVER"
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.37, "center_y": 0.40}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                Check:
+                    id: p_intestine
+                    active: False
+                    pos_hint: {'center_x': 0.16, 'center_y': 0.35}
+                    #on_press: app.blood_donate()
+                MDLabel:
+                    id:p_intestine1
+                    text:"INTESTINE"
+                    font_style: 'H6'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.37, "center_y": 0.35}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+
+
+
+                MDRoundFlatIconButton:
+                    text: "ORGAN DONATED"
+                    pos_hint: {'center_x':0.5 ,'center_y':0.15}
+                    size_hint: (0.8,0.1)
+                    on_press: app.organ_donate()
+                    text_color: "white"
+                    md_bg_color:96/255,125/255,139/255,1
+                    width: 100
+    MDScreen:
+        FloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDTopAppBar:
+                    title: "Donate Organ"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    anchor_title: "left"
+                    elevation: 0
+                    left_action_items: [['arrow-left',lambda x: app.organ_donor_id_screen()]]
+                Widget:

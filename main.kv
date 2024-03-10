@@ -1,29 +1,29 @@
 Screen:
     name: "Main"
+    canvas.before:
+        Rectangle:
+            source:'images/main_background.jpg'
+            size: root.width, root.height
+            pos: self.pos
     MDBoxLayout:
 
     MDNavigationRail:
+        md_bg_color: "#d1ecf8"
 
         MDNavigationRailItem:
             text: "Home"
             icon: "home"
 
         MDNavigationRailItem:
-            text: "Medicine"
-            icon: "account-multiple-plus"
+            text: "Help"
+            icon: "help-circle"
+            on_release: app.help_support()
 
         MDNavigationRailItem:
-            text: "ICU"
-            icon: "account-multiple-plus"
+            text: "Log out"
+            icon: "exit-to-app"
+            on_release: app.log_out()
 
-        MDNavigationRailItem:
-            text: "Organ"
-            icon: "account-multiple-plus"
-        
-        MDNavigationRailItem:
-            text: "Fund"
-            icon: "account-multiple-plus"
-        
 
     MDScreen:
         FloatLayout:
@@ -34,18 +34,14 @@ Screen:
                 font_style: 'H4'
                 font_name: "Comic"
             MDIconButton:
-                icon: "images/log_in.jpg"
-                pos_hint: {"center_x": .95, "center_y": .95}  
-                icon_size: "32sp"
-                on_release: app.dot(self)
-            MDIconButton:
-                icon: "chat"
-                pos_hint: {"center_x": .95, "center_y": .1}  
+                icon: "account-outline"
+                pos_hint: {"center_x": .95, "center_y": .94}
                 icon_size: "32sp"
                 on_release: app.dot(self)
                 md_bg_color: "green"
                 theme_text_color: "Custom"
                 text_color: "white"
+            
             MDBoxLayout:
                 MDGridLayout:
                     size_hint_y:1.
@@ -54,35 +50,46 @@ Screen:
                     spacing:dp(25)
                     ElementCard:
                         image:"images/add_patient.png"
-                        text:"Add Patient"
-                        #on_release: app.readinput()
+                        text:"Add Patient Details"
+                        on_release: app.add_patient()
                     ElementCard:
                         image:"images/update_patient.jpeg"
-                        text:"Update Patient"
-                        #on_release: app.readinput()
+                        text:"Update Patient Details"
+                        on_release: app.update11_patient_details()
                     ElementCard:
                         image:"images/search.jpeg"
-                        text:"Search Patient"
-                        #on_release: app.readinput()
+                        text:"Search Patient Details"
+                        on_release: app.search_patient()
                     ElementCard:
                         image:"images/discharge.png"
                         text:"Discharge Patient"
-                        #on_release: app.readinput()
+                        on_release: app.discharge()
                     ElementCard:
-                        image:"images/bill.png"
-                        text:"Prepare Bill"
-                        #on_release: app.readinput()
-                    ElementCard:
-                        image:"images/delete.png"
+                        image:"images/de.png"
                         text:"Delete Patient"
-                        #on_release: app.readinput()
+                        on_release: app.delete_patient()
+                    ElementCard:
+                        image:"images/add.jpeg"
+                        text:"Add Donor Details"
+                        on_release: app.add_donor_details()
                     ElementCard:
                         image:"images/blood.png"
-                        text:"Donate Blood"
-                        #on_release: app.readinput()
+                        text:"Donate Organ"
+                        on_release: app.organ_donor_id_screen()
+                    ElementCard:
+                        image:"images/blood1.png"
+                        text:"Search Donor Details"
+                        on_release: app.search_blood_details()
+                    ElementCard:
+                        image:"images/de.png"
+                        text:"Delete Donor Details"
+                        on_release: app.delete_donor()
                     
 <ElementCard@MDCard>:
-    md_bg_color:96/255,125/255,150/255,1
+    md_bg_color: 150/255, 173/255, 171/255, 1
+    #md_bg_color: 152/255, 155/255, 139/255, 1
+    #md_bg_color: 44/255, 62/255, 80/255, 1
+    #md_bg_color:96/255,125/255,150/255,1
     padding:"8dp"
     spacing:"5dp"
     radius:[80,40,80,40]

@@ -1,0 +1,163 @@
+
+
+Screen:
+    name: "PATIENT_DETAILS"
+    canvas.before:
+        Rectangle:
+            source:'images/q7.png'
+            size: root.width, root.height
+            pos: self.pos
+    MDScreen:
+        MDBoxLayout:
+            FloatLayout:
+                MDLabel:
+                    text:"Patient Details"
+                    font_style: 'H3'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.57 ,'center_y':0.8}
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_id
+                    text:"Patient ID"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.7}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_name
+                    text:"Patient Name"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.6}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.8}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_mobile_no
+                    text:"Mobile No"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.5}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.7}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_age
+                    text:"Age"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.4}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.6}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_sex
+                    text:"Sex"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.3}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.5}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_marital
+                    text:"Marital Status"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.2}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.4}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_blood
+                    text:"Blood Group"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint : {'center_x':0.35 ,'center_y':0.1}
+                    #pos_hint: {'center_x':0.1 ,'center_y':0.3}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_address
+                    text:"Address"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.78, "center_y": 0.7}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:P_house
+                    text:"House Number"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.78, "center_y": 0.6}
+                    #pos_hint: {"center_x": 0.75, "center_y": 0.8}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_street
+                    text:"Street Number"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.78, "center_y": 0.5}
+                    #pos_hint: {"center_x": 0.75, "center_y": 0.8}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_city
+                    text:"City"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.78, "center_y": 0.4}
+                    #pos_hint: {"center_x": 0.75, "center_y": 0.8}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_state
+                    text:"State"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.78, "center_y": 0.3}
+                    #pos_hint: {"center_x": 0.75, "center_y": 0.8}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+                MDLabel:
+                    id:p_country
+                    text:"Country"
+                    font_style: 'H4'
+                    font_name: "Comic"
+                    pos_hint: {"center_x": 0.78, "center_y": 0.2}
+                    #pos_hint: {"center_x": 0.75, "center_y": 0.8}
+                    #halign:"left"
+                    size_hint: (0.39,0.1)
+                    width: 500
+    MDScreen:
+        FloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDTopAppBar:
+                    title: "Patient Details"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    anchor_title: "left"
+                    elevation: 0
+                    left_action_items: [['arrow-left',lambda x: app.back_to_searchscreen()]]
+                Widget:
+
+
+

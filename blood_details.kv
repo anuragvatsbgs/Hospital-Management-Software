@@ -1,0 +1,71 @@
+Screen:
+    name: "BLOOD_DETAILS"
+    canvas.before:
+        Rectangle:
+            source:'images/q7.png'
+            size: root.width, root.height
+            pos: self.pos
+    MDScreen:
+        FloatLayout:
+            MDGridLayout:
+                size_hint_y:1.
+                cols:1
+                padding:[dp(50),dp(100),dp(10),dp(30)]
+                spacing:dp(25)
+                MDLabel:
+                    text:"Donor ID"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint: {'center_x':0.1 ,'center_y':0.9}
+                    halign:"left"
+                MDLabel:
+                    text:"Donor Name"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint: {'center_x':0.1 ,'center_y':0.8}
+                    halign:"left"
+                MDLabel:
+                    text:"Mobile No"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint: {'center_x':0.1 ,'center_y':0.7}
+                    halign:"left"
+                MDLabel:
+                    text:"Age"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint: {'center_x':0.1 ,'center_y':0.6}
+                    halign:"left"
+                MDLabel:
+                    text:"Sex"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint: {'center_x':0.1 ,'center_y':0.5}
+                    halign:"left"
+                MDLabel:
+                    text:"Marital Status"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint: {'center_x':0.1 ,'center_y':0.4}
+                    halign:"left"
+                MDLabel:
+                    text:"Address"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    pos_hint: {'center_x':0.1 ,'center_y':0.2}
+                    halign:"left"
+    MDScreen:
+        FloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDTopAppBar:
+                    title: "Blood Group Details"
+                    font_style: 'H5'
+                    font_name: "Comic"
+                    anchor_title: "left"
+                    elevation: 0
+                    left_action_items: [['arrow-left',lambda x: app.back_to_search_blood_screen()]]
+                Widget:
+
+
+
