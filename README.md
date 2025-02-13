@@ -15,7 +15,8 @@ Install my-project with npm
   python main.py
 ```
     
-## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+## Feedback
+
+If you have any feedback, please reach out to us at anuragvatsbgs@outlook.com
 
